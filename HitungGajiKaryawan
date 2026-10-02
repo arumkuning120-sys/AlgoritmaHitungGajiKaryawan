@@ -1,0 +1,33 @@
+# Python Implementation
+# Input
+golongan = input("Masukkan golongan karyawan (A/B/C): ")
+jam_lembur = int(input("Masukkan jumlah jam lembur: "))
+# Determine gaji pokok based on golongan
+if golongan == 'A':
+gaji_pokok = 5000000
+elif golongan == 'B':
+gaji_pokok = 6500000
+elif golongan == 'C':
+gaji_pokok = 9500000
+else:
+print("Golongan tidak valid!")
+gaji_pokok = 0 # Set to 0 or handle as an error case
+# Determine gaji lembur based on jam lembur
+if jam_lembur == 1:
+gaji_lembur = gaji_pokok * 0.30
+elif jam_lembur == 2:
+gaji_lembur = gaji_pokok * 0.32
+elif jam_lembur == 3:
+gaji_lembur = gaji_pokok * 0.34
+elif jam_lembur == 4:
+gaji_lembur = gaji_pokok * 0.36
+elif jam_lembur >= 5:
+gaji_lembur = gaji_pokok * 0.38
+else:
+gaji_lembur = 0
+# Calculate total gaji
+total_gaji = gaji_pokok + gaji_lembur
+# Output
+print("Gaji Pokok: Rp ", gaji_pokok)
+print("Gaji Lembur: Rp ", gaji_lembur)
+print("Total Penghasilan: Rp ", total_gaji)
